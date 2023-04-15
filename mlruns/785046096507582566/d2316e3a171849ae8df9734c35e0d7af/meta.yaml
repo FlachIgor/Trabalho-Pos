@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/User/Desktop/Trabalho%20Pos/trabalhoengml/mlruns/785046096507582566/d2316e3a171849ae8df9734c35e0d7af/artifacts
+end_time: 1681014602888
+entry_point_name: ''
+experiment_id: '785046096507582566'
+lifecycle_stage: active
+run_id: d2316e3a171849ae8df9734c35e0d7af
+run_name: __default__
+run_uuid: d2316e3a171849ae8df9734c35e0d7af
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1681014601632
+status: 4
+tags: []
+user_id: User

@@ -1,0 +1,53 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+intermediate_data:
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/dfIntermediate.parquet
+
+primary_data:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/dfPrimary.parquet
+
+primary_data_3PT:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/dfPrimary3PT.parquet
+
+primary_data_metrics:
+  type: kedro_mlflow.io.metrics.MlflowMetricsDataSet
+
+data_train:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/dfTrain.parquet
+
+data_test:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/dfTest.parquet
+
+final_model_lr:
+    type: kedro_mlflow.io.artifacts.MlflowArtifactDataSet
+    data_set:
+        type: kedro_mlflow.io.models.MlflowModelSaverDataSet
+        flavor: mlflow.sklearn
+        filepath: data/06_models/model_lr
+
+final_model_ada:
+    type: kedro_mlflow.io.artifacts.MlflowArtifactDataSet
+    data_set:
+        type: kedro_mlflow.io.models.MlflowModelSaverDataSet
+        flavor: mlflow.sklearn
+        filepath: data/06_models/model_ada
+  
+classification_metrics_lr:
+  type: kedro_mlflow.io.metrics.MlflowMetricsDataSet
+
+classification_metrics_ada:
+  type: kedro_mlflow.io.metrics.MlflowMetricsDataSet
+
+classification_metrics_lr_3PT:
+  type: kedro_mlflow.io.metrics.MlflowMetricsDataSet
+
+classification_metrics_ada_3PT:
+  type: kedro_mlflow.io.metrics.MlflowMetricsDataSet

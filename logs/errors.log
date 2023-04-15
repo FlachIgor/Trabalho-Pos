@@ -1,0 +1,38 @@
+2023-04-07 23:17:24,065 - kedro.pipeline.node - ERROR - Node 'NoImportaDados: load_data(None) -> [raw_data]' failed with error: 
+[Errno 2] No such file or directory: 'data/02_intermediate/kobe_dataset.csv'
+2023-04-07 23:17:39,112 - kedro.pipeline.node - ERROR - Node 'NoImportaDados: load_data(None) -> [intermediate_data]' failed with error: 
+[Errno 2] No such file or directory: 'data/02_intermediate/kobe_dataset.csv'
+2023-04-07 23:19:00,789 - kedro.pipeline.node - ERROR - Node 'NoImportaDados: load_data(None) -> [intermediate_data]' failed with error: 
+[Errno 2] No such file or directory: 'data/02_intermediate/kobe_dataset.csv'
+2023-04-07 23:19:43,669 - kedro.pipeline.node - ERROR - Node 'NoImportaDados: load_data(None) -> [intermediate_data]' failed with error: 
+"['lng', 'minutes remaining', 'short_distance'] not in index"
+2023-04-07 23:21:47,151 - kedro.pipeline.node - ERROR - Node 'NoImportaDados: load_data(None) -> [intermediate_data]' failed with error: 
+"['lng', 'minutes remaining'] not in index"
+2023-04-08 00:22:43,438 - kedro.pipeline.node - ERROR - Node 'NoTransformaDados: transform_data([intermediate_data]) -> [primary_data]' failed with error: 
+'NoneType' object is not subscriptable
+2023-04-08 00:44:05,903 - kedro.pipeline.node - ERROR - Node 'NoTransformaDados: transform_data([intermediate_data]) -> [primary_data]' failed with error: 
+'NoneType' object is not subscriptable
+2023-04-08 00:48:59,702 - kedro.pipeline.node - ERROR - Node 'NoTransformaDados: transform_data(None) -> [primary_data]' failed with error: 
+'NoneType' object is not subscriptable
+2023-04-08 21:51:38,296 - kedro.pipeline.node - ERROR - Node 'NoMetricas: report_model([final_model]) -> [classification_metrics]' failed with error: 
+'AdaBoostClassifier' object has no attribute 'best_index_'
+2023-04-09 00:44:02,136 - kedro.pipeline.node - ERROR - Node 'NoMetricasLr: report_model([final_model_lr]) -> [classification_metrics_lr]' failed with error: 
+[Errno 22] Invalid argument: "LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,\n                   intercept_scaling=1, l1_ratio=None, max_iter=1000,\n                   multi_class='auto', n_jobs=None, penalty='l2',\n                   random_state=5960, solver='lbfgs', tol=0.0001, verbose=0,\n                   warm_start=False).pkl"
+2023-04-09 01:30:02,862 - kedro.pipeline.node - ERROR - Node 'NoTreinaModeloLr: train_model_lr([data_train,params:n_folds]) -> [final_model_lr]' failed with error: 
+'LogLoss' is not a valid scoring value. Use sklearn.metrics.get_scorer_names() to get valid options.
+2023-04-09 01:30:47,062 - kedro.pipeline.node - ERROR - Node 'NoTreinaModeloLr: train_model_lr([data_train,params:n_folds]) -> [final_model_lr]' failed with error: 
+'LogLoss' is not a valid scoring value. Use sklearn.metrics.get_scorer_names() to get valid options.
+2023-04-09 01:31:02,443 - kedro.pipeline.node - ERROR - Node 'NoTreinaModeloLr: train_model_lr([data_train,params:n_folds]) -> [final_model_lr]' failed with error: 
+'log_loss' is not a valid scoring value. Use sklearn.metrics.get_scorer_names() to get valid options.
+2023-04-09 01:51:33,613 - kedro.pipeline.node - ERROR - Node 'NoMetricasLr: report_model([final_model_lr]) -> [classification_metrics_lr]' failed with error: 
+[Errno 22] Invalid argument: "LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,\n                   intercept_scaling=1, l1_ratio=None, max_iter=1000,\n                   multi_class='auto', n_jobs=None, penalty='l2',\n                   random_state=5422, solver='lbfgs', tol=0.0001, verbose=0,\n                   warm_start=False).pkl"
+2023-04-09 01:58:22,779 - kedro.pipeline.node - ERROR - Node 'NoMetricasLr: report_model([final_model_lr]) -> [classification_metrics_lr]' failed with error: 
+[Errno 22] Invalid argument: "LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,\n                   intercept_scaling=1, l1_ratio=None, max_iter=1000,\n                   multi_class='auto', n_jobs=None, penalty='l2',\n                   random_state=7222, solver='lbfgs', tol=0.0001, verbose=0,\n                   warm_start=False).pkl"
+2023-04-09 02:00:59,091 - kedro.pipeline.node - ERROR - Node 'NoMetricasLr: report_model([final_model_lr]) -> [data/06_models/model_lr.pkl]' failed with error: 
+name 'model' is not defined
+2023-04-09 02:01:56,965 - kedro.pipeline.node - ERROR - Node 'NoMetricasLr: report_model([final_model_lr]) -> [data/06_models/model_lr.pkl]' failed with error: 
+[Errno 22] Invalid argument: "LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,\n                   intercept_scaling=1, l1_ratio=None, max_iter=1000,\n                   multi_class='auto', n_jobs=None, penalty='l2',\n                   random_state=8087, solver='lbfgs', tol=0.0001, verbose=0,\n                   warm_start=False).pkl"
+2023-04-09 03:21:13,352 - kedro.pipeline.node - ERROR - Node 'NoTransformaDados: transform_data([intermediate_data]) -> [primary_data,primary_data_3PT]' failed with error: 
+'shot_type'
+2023-04-09 03:22:48,189 - kedro.pipeline.node - ERROR - Node 'NoTransformaDados: transform_data([intermediate_data]) -> [primary_data,primary_data_3PT]' failed with error: 
+'shot_type'

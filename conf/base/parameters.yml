@@ -1,0 +1,4 @@
+#Train test split
+test_size: 0.2
+test_split_randon_state: 123
+n_folds: 5
